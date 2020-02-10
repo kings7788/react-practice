@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class Item extends Component {
+class Item extends PureComponent {
   render() {
+    console.log("render:",this.props.text);
     return (
-      <li>{this.props.children}</li>
+      <li>{this.props.text}</li>
     )
 
 
