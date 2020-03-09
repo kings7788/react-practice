@@ -15,7 +15,7 @@ class List extends Component {
         {Object.keys(steps).map((key, idx) => {
           const value = steps[key]
             return(
-              <Item text={value}>
+              <Item text={value} >
                 {key}:{value}:{idx}
           </Item>
               )
