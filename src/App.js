@@ -24,6 +24,11 @@ import ChatRoom from './component/Hw_Chat/Chat_Room'
 import InifiniteScroll from './component/Implement/InfiniteScroll'
 import HooksCount from './component/Hooks/HooksCount'
 import HooksTodo from './component/HooksTodo/TodoList'
+import FetchUseEffect from './component/HooksUseEffect/FetchUseEffect'
+// import ProductApp from './component/ContextApi/ProductApp'
+import WeatherApp from './component/Weather/WeatherApp';
+
+import './component/Weather/styles.css';
 function App() {
   return (
     <Router>
@@ -104,6 +109,21 @@ function App() {
               <Link to="/todolist">hooks Todo </Link>
             </li>
           </ul>
+          <ul>
+            <li>
+              <Link to="/hooksEffect">hooks useEffect </Link>
+            </li>
+          </ul>
+          {/* <ul>
+            <li>
+              <Link to="/contextApi">Context api </Link>
+            </li>
+          </ul> */}
+          <ul>
+            <li>
+              <Link to="/weather">Weather </Link>
+            </li>
+          </ul>
         </nav>
         <div className={style.container}>
           <Switch>
@@ -152,6 +172,15 @@ function App() {
             </Route>
             <Route path="/todolist">
               <HooksTodo />
+            </Route>
+            <Route path="/hooksEffect">
+              <FetchUseEffect />
+            </Route>
+            {/* <Route path="/contextApi">
+              <ProductApp />
+            </Route> */}
+            <Route path="/weather">
+              <WeatherApp />
             </Route>
           </Switch>
           </div>

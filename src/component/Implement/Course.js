@@ -10,7 +10,6 @@ class Course extends Component{
           className={style.cover}
           style={{
             backgroundImage: `url(${image})`,
-            width: 320
           }}
         />
         <div className={style.info}>

@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 
 const TodoInput = ({ addItem }) => {
   const [text, setText] = useState('')
@@ -9,10 +9,17 @@ const TodoInput = ({ addItem }) => {
   const onSubmit = e => {
     e.preventDefault();
     addItem(text);
+    setText('');
   }
+  const ref = useRef()
+  
+  useEffect(() => {
+    ref.current.focus();
+  });
+
   return (
     <form onSubmit={onSubmit}>
-      <input type="text" value={text} onChange={onChagneText} />
+      <input type="text" value={text} onChange={onChagneText}  ref={ref}  />
       <button type="submit" >Submit</button>
     </form>
   )
